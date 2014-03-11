@@ -1,0 +1,8 @@
+{application,max_pair_list,
+             [{description,[]},
+              {vsn,"1"},
+              {registered,[]},
+              {applications,[kernel,stdlib]},
+              {mod,{max_pair_list_app,[]}},
+              {env,[]},
+              {modules,[mpl]}]}.
