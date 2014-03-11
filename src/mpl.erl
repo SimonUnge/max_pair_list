@@ -14,15 +14,15 @@ extract_positive_negative_zeroes_and_ones(List) ->
     {Zeros, Ones} = lists:partition(fun(E) -> E =:= 0 end, ZerosAndOnes),
     {PositiveList, NegativeList, Zeros, Ones}.
 
-max_of_positive([M1,M2|Rest]) ->
-    M1*M2 + max_of_positive(Rest);
+max_of_positive([E1,E2|Rest]) ->
+    E1*E2 + max_of_positive(Rest);
 max_of_positive([E]) ->
     E;
 max_of_positive([]) ->
     0.
 
-max_of_negative_and_zeroes([M1,M2|Rest], Z) ->
-    M1*M2 + max_of_negative_and_zeroes(Rest, Z);
+max_of_negative_and_zeroes([E1,E2|Rest], Zeroes) ->
+    E1*E2 + max_of_negative_and_zeroes(Rest, Zeroes);
 max_of_negative_and_zeroes([E],[]) ->
     E;
 max_of_negative_and_zeroes(_,_) ->

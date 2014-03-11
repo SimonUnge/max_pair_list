@@ -8,7 +8,7 @@ first_test() ->
     ?assertEqual(ExpectedMax, mpl:mpl(Input)).
 
 second_test() ->
-    Input = [-1, -5, -3, 0, 1, 5, 8],
+    Input = [-1, -3, 0, -5, 1, 5, 8],
     ExpectedMax = 56,
     ?assertEqual(ExpectedMax, mpl:mpl(Input)).
 
@@ -25,4 +25,9 @@ forth_test() ->
 fifth_test() ->
     Input = [0,1,2,3,4,5],
     ExpectedMax = 27,
+    ?assertEqual(ExpectedMax, mpl:mpl(Input)).
+
+sixth_test() ->
+    Input = [],
+    ExpectedMax = 0,
     ?assertEqual(ExpectedMax, mpl:mpl(Input)).
